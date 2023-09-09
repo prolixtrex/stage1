@@ -1,29 +1,10 @@
 
 const currentDay = document.getElementById("day")
-const currentSeconds = document.getElementById("seconds")
 const currentTime = document.getElementById("time")
-const currentDate = document.getElementById("date")
-const currentYear = document.getElementById("year")
-const dayNum = document.getElementById("dayNum")
-const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
 
+const date = new Date()
 
-
-setInterval(() => {
-    const date = new Date()
-
-    currentTime.innerHTML = `${date.getHours()}:${date.getMinutes()}`
-    dayNum.innerHTML = date.getDate()
-    currentDate.innerHTML = months[date.getMonth()]
-    currentYear.innerHTML = date.getFullYear()
-
-    dayOfWeek(date.getDay().toLocaleString());
-}, 1000);
-
-setInterval(() => {
-    const date = new Date()
-    currentSeconds.innerHTML = date.getUTCMilliseconds();
-}, 100);
+currentTime.innerHTML = date.getUTCMilliseconds()
 
 const dayOfWeek = (prop) => {
     let result;
@@ -57,3 +38,5 @@ const dayOfWeek = (prop) => {
 
     currentDay.innerHTML = result
 }
+
+dayOfWeek(date.getDay().toLocaleString());
