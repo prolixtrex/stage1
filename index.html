@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <main class="main">
+            <div class="container">
+                <div class="image">
+                    <img
+                        src="./images/profile.jpg"
+                        alt="bright89"
+                        data-testid="slackDisplayImage"
+                    />
+                </div>
+                <div class="info">
+                    <div class="details">
+                        <p>HELLO EVERYBODY, I AM</p>
+                        <h2 data-testid="slackUserName">Bright Anua</h2>
+                    </div>
+
+                    <div class="details">
+                        <div data-testid="myTrack">FRONTEND DEVELOPER</div>
+                    </div>
+
+                    <div class="details">
+                        <p>My github profile</p>
+                        <a
+                            href="https://github.com/prolixtrex/stage1"
+                            target="_blank"
+                            data-testid="githubURL"
+                            ><em>Bright Anua</em></a
+                        >
+                    </div>
+
+                    <div class="details date">
+                        <div id="day" data-testid="currentDayOfTheWeek"></div>
+                        <div id="dayNum"></div>
+                        <div id="date"></div>
+                        <span>,</span>
+                        <div id="year"></div>
+                        <div id="time"></div>
+                        <div id="seconds" data-testid="currentUTCTime"></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <script src="script.js"></script>
+    </body>
+</html>
